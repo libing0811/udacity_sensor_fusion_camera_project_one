@@ -83,15 +83,15 @@ The descriptor distance ratio is compute as follow:
 
   In the following table, each cell means one combination. the performance item will list one by one (from 1 to 4).
   
-  For each test, i make some screenshot images, the images are store in images directory.
+  **For each test, i make some screenshot images, the images are store in image_results directory.**
   
   According to the result of test, I choose top-3 combinations.
   
-  Top1: FAST detector + BRIEF descriptor
+  **Top1: FAST detector + BRIEF descriptor**
   
-  Top2: FAST detector + ORB descriptor
+  **Top2: FAST detector + ORB descriptor**
   
-  Top3: ORB detector + BRISK descriptor
+  **Top3: ORB detector + BRISK descriptor**
     
   Because Collision Avoid System is a real-time system. So I mainly consider the speed of process and the number of matched poinst.
   
