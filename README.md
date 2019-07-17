@@ -47,7 +47,6 @@ I test their time one by one with FAST (1300 keypoints)
 
     if (descSource.type() != CV_32F)
     {
-      // OpenCV bug workaround : convert binary descriptors to floating point due to a bug in current OpenCV implementation
       descSource.convertTo(descSource, CV_32F);
       descRef.convertTo(descRef, CV_32F);
     }
@@ -75,6 +74,10 @@ The descriptor distance ratio is compute as follow:
 
   I have make the test with all possible detector / descriptor combinations.
   And I record the result of the combinations in the table below:
+|1|2|3|
+:-|:-:|:-
+3|2|1
+
 |detector&descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
 |-|-|-|-|-|-|-|-|
 BRISK|
