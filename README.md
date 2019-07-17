@@ -81,9 +81,12 @@ The descriptor distance ratio is compute as follow:
   3. detector time for one image
   4. descriptor time for one image
 
+  In the following table, each cell means one combination. the performance item will list one by one (from 1 to 4).
+  
+  
 |c:detector&r:descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
 |-|-|-|-|-|-|-|-|
-BRISK|1189 points;<br/>771 matched<br/>;17ms<br/>;2ms<br/>;| 
+BRISK|1189 points<br/>771 matched<br/>17ms<br/>2ms<br/>| 359 points<br/>179 matched<br/>20ms<br/>1.5ms<br/> |1169 points<br/>736 matched<br/>1ms<br/>2ms<br/> |2714 points<br/>1545 matched<br/>40ms<br/>3ms<br/>|3213 points<br/>2013 matched<br/>10ms<br/>3.5ms<br/>|1655 points<br/>1204 matched<br/>80ms<br/>3ms<br/>|1371 points<br/>586 matched<br/>120ms<br/>1ms<br/>|
 BRIEF|
 ORB|
 FREAK|
