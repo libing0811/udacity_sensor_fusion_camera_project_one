@@ -86,9 +86,12 @@ The descriptor distance ratio is compute as follow:
   For each test, i make some screenshot images, the images are store in images directory.
   
   According to the result of test, I choose top-3 combinations.
-        Top1: FAST detector + BRIEF descriptor
-        Top2: FAST detector + ORB descriptor
-        Top3: ORB detector + BRISK descriptor
+  
+  Top1: FAST detector + BRIEF descriptor
+  
+  Top2: FAST detector + ORB descriptor
+  
+  Top3: ORB detector + BRISK descriptor
     
   Because Collision Avoid System is a real-time system. So I mainly consider the speed of process and the number of matched poinst.
   
