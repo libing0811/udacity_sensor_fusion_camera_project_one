@@ -75,7 +75,7 @@ The descriptor distance ratio is compute as follow:
 
   I have make the test with all possible detector / descriptor combinations.
   And I record the result of the combinations in the table below:
-|detector&descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT
+|detector&descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
 |-|-|-|-|-|-|-|-|
 BRISK|
 BRIEF|
