@@ -62,7 +62,7 @@ void matchDescriptors(cv::Mat &imgSource, cv::Mat &imgRef, vector<cv::KeyPoint> 
         {
             float ratio = knn_match_list[k][0].distance / knn_match_list[k][1].distance;
             
-            if(ratio >= 0.8){
+            if(ratio < 0.8){
                 matches.push_back(knn_match_list[k][0]);
             }
         }
