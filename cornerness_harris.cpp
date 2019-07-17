@@ -64,7 +64,6 @@ void cornernessHarris()
             // min : r - range , c - range
             // max : r + range , c + range
             int cur_value = (int)(dst_norm.at<float>(r,c));
-            int min_value = 255;
             
             //skip the value too low, important. must have this limit. 
             //or the corner list found will be every large.
@@ -73,11 +72,17 @@ void cornernessHarris()
 
 
             bool flag=true;
+            int min_value=255;
             //start to loop neighborhood
             for (int i = r-range ; i <= r + range ; i++)
             {
                 for (int j= c-range ; j <= c + range ; j++)
                 {
+                    //skip point does not in the circle;
+                    float distance= sqrt((i-r)*(i-r)+(j-c)*(j-c));
+                    if(distance > range)
+                        continue;
+
                     int search_value= (int)(dst_norm.at<float>(i,j));
                     
                     if(min_value>search_value)
@@ -94,6 +99,7 @@ void cornernessHarris()
                 }
             }
             
+            //cur_value is local max (and not all value equal with each other)
             if(flag == true && min_value!=cur_value)
             {
 
@@ -105,6 +111,7 @@ void cornernessHarris()
             
         }
     }
+
   
     std::cout << "keypoints_pre size is "<<keypoints_pre.size() << std::endl;
     
