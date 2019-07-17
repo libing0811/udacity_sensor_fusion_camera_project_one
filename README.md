@@ -83,7 +83,7 @@ The descriptor distance ratio is compute as follow:
 
 |c:detector&r:descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
 |-|-|-|-|-|-|-|-|
-BRISK|1189 points;771 matched;17ms;2ms;| 
+BRISK|1189 points;<br/>771 matched<br/>;17ms<br/>;2ms<br/>;| 
 BRIEF|
 ORB|
 FREAK|
