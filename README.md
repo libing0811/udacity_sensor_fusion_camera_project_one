@@ -24,11 +24,10 @@ The result is shown in below:
 In my opinion, FAST/BRISK/ORB is good for us. Because they are fast, and they can get a lot of keypoints.
 
 ## MP3. Keypoint Removal
-
-  I loop all the keypoints, and check their postion one by one.
-  The keypoint which is not inside the pre-defined rectangle will be deleted.
-  x range: rect.x + rect.x+width
-  y range: rect.y + rect.y+height
+I loop all the keypoints, and check their postion one by one.
+The keypoint which is not inside the pre-defined rectangle will be deleted.
+    x range: rect.x + rect.x+width
+    y range: rect.y + rect.y+height
 
 As the result, i find there is a few keypoint on the ground or beyond the vehicle boundary.
 And it seems FAST will have more keypoint out the the boundary of real car.
@@ -46,28 +45,28 @@ I test their time one by one with FAST (1300 keypoints)
 
 ## MP5. Descriptor Matching
 
-  if (descSource.type() != CV_32F)
-  {
-    // OpenCV bug workaround : convert binary descriptors to floating point due to a bug in current OpenCV implementation
-    descSource.convertTo(descSource, CV_32F);
-    descRef.convertTo(descRef, CV_32F);
-  }
-  matcher = cv::FlannBasedMatcher::create();
+    if (descSource.type() != CV_32F)
+    {
+      // OpenCV bug workaround : convert binary descriptors to floating point due to a bug in current OpenCV implementation
+      descSource.convertTo(descSource, CV_32F);
+      descRef.convertTo(descRef, CV_32F);
+    }
+    matcher = cv::FlannBasedMatcher::create();
 
 ## MP6. Descriptor Distance Ratio
 The descriptor distance ratio is compute as follow:
 
-  float threshold_ratio=0.8;
-  int count_before=knn_match_list.size();
+    float threshold_ratio=0.8;
+    int count_before=knn_match_list.size();
 
-  for(int k=0 ; k< knn_match_list.size() ; k++)
-  {
-      float ratio = knn_match_list[k][0].distance / knn_match_list[k][1].distance;
+    for(int k=0 ; k< knn_match_list.size() ; k++)
+    {
+        float ratio = knn_match_list[k][0].distance / knn_match_list[k][1].distance;
 
-      if(ratio < threshold_ratio){
-          matches.push_back(knn_match_list[k][0]);
-      }
-  }
+        if(ratio < threshold_ratio){
+            matches.push_back(knn_match_list[k][0]);
+        }
+    }
 
 ## MP7. Performance Evaluation : the number of keypoints in preceding vehicle for detectors
 ## MP.8 Performance Evaluation : the number of matched keypoints for detectors & descriptors
