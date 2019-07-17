@@ -74,13 +74,16 @@ The descriptor distance ratio is compute as follow:
 
   I have make the test with all possible detector / descriptor combinations.
   And I record the result of the combinations in the table below:
-|1|2|3|
-:-|:-:|:-
-3|2|1
 
-|detector&descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
+  Note: for each combination, we record following performance:
+  1. The number of keypoints found in all 10 images (inside the rectangle)
+  2. The number of matched points in all 10 images (inside the rectangle)
+  3. detector time for one image
+  4. descriptor time for one image
+
+|c:detector&r:descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT |
 |-|-|-|-|-|-|-|-|
-BRISK|
+BRISK|1189 points;771 matched;17ms;2ms;| 
 BRIEF|
 ORB|
 FREAK|
