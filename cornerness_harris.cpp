@@ -43,7 +43,7 @@ void cornernessHarris()
     vector<cv::KeyPoint> keypoints_pre;
   
   //int range =10 or 5 or 2 or 1, with no nms, looks good.
-    int range=3;
+    int range=blockSize;
   
     //you must use dst_norm , not dst_norm_scaled. 
     //the dst_norm_scaled value maybe very large. Not inside [0,255]
@@ -166,7 +166,7 @@ void cornernessHarris()
             float IOU = cv::KeyPoint::overlap(pointA, pointB);
 
             //threshold should > 0.5
-            float threshold = 0.2;
+            float threshold = 0.4;
             if(IOU>threshold){
 
                 std::cout << "nms found "<<IOU <<" "<<loop<< std::endl;
