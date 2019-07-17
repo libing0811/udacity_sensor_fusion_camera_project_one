@@ -69,12 +69,20 @@ The descriptor distance ratio is compute as follow:
     }
 
 ## For the following three tasks:
-MP7. Performance Evaluation : the number of keypoints in preceding vehicle for detectors
-MP.8 Performance Evaluation : the number of matched keypoints for detectors & descriptors
-MP.9 Performance Evaluation : the used time for detectors & descriptors
+  MP7. Performance Evaluation : the number of keypoints in preceding vehicle for detectors
+  MP.8 Performance Evaluation : the number of matched keypoints for detectors & descriptors
+  MP.9 Performance Evaluation : the used time for detectors & descriptors
 
-I have make the test with all possible detector / descriptor combinations.
-And I record the result of the combinations in the table below:
+  I have make the test with all possible detector / descriptor combinations.
+  And I record the result of the combinations in the table below:
+  detector&descriptor | SHITOMASI | HARRIS | FAST | BRISK | ORB | AKAZE | SIFT
+  -|-|-|-|-|-|-|-|
+  BRISK|
+  BRIEF|
+  ORB|
+  FREAK|
+  AKAZE|
+  SIFT|
 
 
 
